@@ -30,21 +30,15 @@ int main()
         cout << "Please enter a level (between 0 and 100)" << endl;
         cin >> level;
     } while ((level < 0) || (level > 100)); //Repeat until a valid number is entered
-
-    // Mutuallly Exclusive Decision Pathway
-    if (level == 0) 
-    {
-        cout << "Tank is empty. It needs filling." << endl;
-    } 
-    else if (level <= low)                       // check the level
-    {
-        cout << "Tank is low and needs filling." << endl;
-    }
-    else if (level < high) 
-    {
-        cout << "Tank has sufficient fuel" << endl;
-    }
-    else {
-        cout << "Tank is full" << endl;
-    }
+    cout << "Tank is ";
+    if (level <= 5)
+        cout << "dangerously low\n";
+    else if (level > 5 && level <= 30)
+        cout << "low\n";
+    else if (level > 30 && level <= 80)
+        cout << "at medium range\n";
+    else if (level > 80 && level <= 95)
+        cout << "high\n";
+    else
+        cout << "full\n";
 }

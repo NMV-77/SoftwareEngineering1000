@@ -26,30 +26,31 @@ int main()
         cout << "3 - Customer Service Desk" << endl;
         cout << "4 - All other options" << endl;
         cin >> selection;
-    } while ((selection < 0) || (selection > 4)); // Repeat until a valid number is entered
-
-    // Mutuallly Exclusive Decision Pathway
-    if (selection == 0)
+   
+    switch (selection)
     {
+    case 0:
         cout << "9 to 5, Monday to Saturday. 10 to 4 on Sundays and Bank Holidays" << endl;
-    }
-    else if (selection == 1)                       
-    {
+        break;
+    case 1:
         cout << "Redirecting you now" << endl;
         redirect(100);
-    }
-    else if (selection == 2)
-    {
+        break;
+    case 2:
         cout << "Sorry - you will need to come to the store for that." << endl;
         hangup();
-    }
-    else if ((selection == 3) || (selection == 4)) {
+        break;
+    case 3:
         cout << "Redirecting you now" << endl;
         redirect(220);
-    } 
-    else 
-    {
-        // Defensive coding! Catch the unexpected - in theory, this code cannot be reached
-        cerr << "Error - invalided variable" << endl;
+        break;
+    case 4:
+        cout << "Redirecting you now" << endl;
+        redirect(220);
+        break;
+    default:
+        cout << "Error - invalided variable" << endl;
+
     }
+    } while ((selection < 0) || (selection > 4)); // Repeat until a valid number is entered
 }
