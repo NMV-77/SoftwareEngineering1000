@@ -9,7 +9,7 @@ int main()
     printf("Enter your age\n");
 
     //Read keyboard response - look for an integer
-    int found = scanf_s("%d", &x);
+    int found =  scanf_s("%d", &x);
 
     //Display how many items were matched
     printf("Matched %d items\n", found);

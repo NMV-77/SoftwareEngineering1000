@@ -5,7 +5,7 @@
 int main()
 {
 	//Create and initialise a 16-bit variable
-	unsigned short number = 0b0000000000001011;
+	unsigned float number = 0b0000000000001011;
 
 	//Write to the terminal (using the tutors bespoke function)
 	displayAndCompare(number);
@@ -19,7 +19,7 @@ int main()
 	displayAndCompare(number);
 
 	//Shift left 2 bits
-	number <<= 2;
+	number <<= 11;
 	displayAndCompare(number);
 
 	//Right right 4 bits
@@ -29,8 +29,10 @@ int main()
 	//TASKS:
 
 	//Shift right by 1 and display
-
+	number >>= 1;
+	displayAndCompare(number);
 
 	//Shift left by 1 and display
-
+	number <<= 1;
+	displayAndCompare(number);
 }
