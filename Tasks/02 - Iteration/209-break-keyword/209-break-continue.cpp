@@ -5,7 +5,7 @@ int main()
     for (int i = 0; ; i++)   // potentially loop from 1 to 10  
     {
         char c = getchar(); //Read character
-        char _ = getchar(); //Read and discard newline (nice little hack :)
+        //char _ = getchar(); //Read and discard newline (nice little hack :)
         if (c == 'q'||c=='Q')
         {
             printf("\tUser stopped the loop early at %d\n", i);

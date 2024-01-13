@@ -35,9 +35,9 @@ int main()
         cout << "dangerously low\n";
     else if (level > 5 && level <= 30)
         cout << "low\n";
-    else if (level > 30 && level <= 80)
+    else if (level > 30 && level <= 70)
         cout << "at medium range\n";
-    else if (level > 80 && level <= 95)
+    else if (level > 70 && level <= 95)
         cout << "high\n";
     else
         cout << "full\n";
